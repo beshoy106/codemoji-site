@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Setup-phase privacy information for the Codemoji Discord collection bot.">
+  <title>Codemoji Discord bot · Privacy policy · Setup phase</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background:#15131c; color:#eeebf5; }
+    body { margin:0; line-height:1.65; }
+    main { max-width:760px; margin:auto; padding:48px 24px 64px; }
+    a { color:#c9b1ff; }
+    h1 { font-size:clamp(1.8rem, 5vw, 2.7rem); line-height:1.2; margin:12px 0 20px; }
+    h2 { font-size:1.2rem; margin-top:32px; }
+    .label { color:#c9b1ff; text-transform:uppercase; letter-spacing:.1em; font-size:.8rem; }
+    .notice { padding:18px; background:#272030; border:1px solid #715386; border-radius:12px; }
+    .muted { color:#bcb6ca; }
+    li { margin:8px 0; }
+    footer { border-top:1px solid #393043; margin-top:40px; padding-top:20px; }
+  </style>
+</head>
+<body><main>
+  <p class="label">Codemoji · Discord collection bot</p>
+  <h1>Privacy policy <span class="muted">(setup phase)</span></h1>
+  <p class="muted">Last updated: October 12, 2026</p>
+  <div class="notice"><strong>Collection is not active.</strong> The bot has been installed in its operator's test server but the collector is not running. This page separates the intended collection behavior from the currently completed setup. Deletion controls, encrypted collection storage and live scope checks must be finalized before collection begins.</div>
+
+  <h2>Purpose and scope</h2>
+  <p>Codemoji is a local Windows companion for expressive input in the Codex desktop app. Its optional Discord bot is intended to collect custom emoji, stickers and GIF references deliberately posted by an approved account in explicitly selected channels of an approved collection server. It is not intended to monitor direct messages, other servers or general conversations.</p>
+
+  <h2>What the bot will receive and retain</h2>
+  <p>Discord delivers message events and permitted history through its official bot API. Those events can include surrounding text and other metadata. The collector must validate server, channel and author scope before expression processing; raw message payloads and surrounding conversation text must not be retained or logged.</p>
+  <p>The intended collection records include:</p>
+  <ul>
+    <li>Server, channel, source-message and expression identifiers needed for collection membership, updates and duplicate prevention.</li>
+    <li>Emoji or sticker names, animation or format information, and relevant media or provider-page references.</li>
+    <li>Collection labels, separately chosen favorites and Codemoji usage records, where those features are implemented.</li>
+  </ul>
+  <p>Provider-page references are not necessarily downloadable media files. Media retrieval, previews and format handling are not implemented by the initial classifier. Collection access does not grant rights to reproduce or redistribute someone else's content.</p>
+
+  <h2>Storage and credentials</h2>
+  <p>The bot credential is stored outside the project source in a device-local file encrypted with Windows DPAPI for the current Windows user. It is not included in project synchronization or public website files. Access is restricted to that user and Windows SYSTEM. This protects the file at rest, not against malicious software already running as the same user.</p>
+  <p>Discord-derived collection records must use encrypted local storage before the collector is activated. The existing manual-import Codemoji Vault is currently unencrypted and is not automatically the bot's collection store. No bot-derived collection records are currently being saved.</p>
+
+  <h2>Third parties and sharing</h2>
+  <p>Posts in a private Discord server are stored and processed by Discord under its <a href="https://discord.com/privacy">Privacy Policy</a>. Private server membership does not make those posts local-only.</p>
+  <p>No Codemoji-operated cloud collection service, advertising or analytics is configured. No cross-device transfer of bot-collected data is active. Future optional media fetching would contact the relevant source service and must be disclosed and reviewed before activation.</p>
+  <p>Codemoji's existing attachment action requests a paste into an unsent Codex draft and never automatically submits it. Codex may nevertheless stage or upload an attachment before the draft is sent. Any future integration of bot-collected items with that action must be explicit; it is not currently implemented. Service processing is governed by the selected service's settings and policies.</p>
+
+  <h2>Retention, correction and deletion</h2>
+  <p>Collection records are intended to be retained only as needed for the selected personal collection. Before activation, the operator must implement and verify removal and correction controls, describe the relationship between source-message deletion and collection removal, and provide a way to request deletion of retained API data. Source-message deletion alone must not be advertised as erasing all retained copies unless that behavior is implemented and verified.</p>
+  <p>Disconnecting or stopping a bot is not the same as deleting stored records or revoking its credential. Those actions must be described separately in the final policy and controls.</p>
+
+  <h2>Contact and changes</h2>
+  <p>Contact the operator through <a href="https://github.com/beshoy106/codemoji-site/issues">GitHub Issues for the Codemoji information repository</a>. The operator's GitHub account is <a href="https://github.com/beshoy106">beshoy106</a>.</p>
+  <p><strong>Issues are public.</strong> Do not post bot tokens, credentials, private media, chat content or private account identifiers. For a sensitive request, ask for a private contact arrangement without including the sensitive details in the issue. General collection, correction and deletion questions can be raised through this route.</p>
+  <p><strong>Activation gate:</strong> before live collection begins, this policy must match the implemented storage, scope and deletion controls. Publishing this setup-phase information is not evidence that the collector or those controls are already implemented.</p>
+  <p>Material changes to access scope, storage, third-party processing or sharing must be reflected in the policy before those changes are enabled.</p>
+  <footer class="muted">Setup-phase privacy information. This page contains no scripts, forms, cookies, remote fonts or analytics. GitHub Pages hosting requests are handled under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</footer>
+</main></body></html>
